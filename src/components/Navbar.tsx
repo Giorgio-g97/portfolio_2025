@@ -10,7 +10,7 @@ export default function Header() {
           href="/"
           className="text-xl font-bold text-foreground dark:text-foreground-dark"
         >
-          Giorgio
+          G
         </Link>
         <div className="flex items-center space-x-6">
           <Link
