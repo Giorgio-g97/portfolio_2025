@@ -2,20 +2,20 @@ import ProjectCard from "./ProjectCard"
 
 const projects = [
   {
-    title: "Progetto 1",
+    title: "NUSA Creazioni",
     description: "Una breve descrizione del Progetto 1. Questo progetto mostra...",
-    image: "/placeholder.svg",
-    tags: ["React", "Node.js", "MongoDB"],
-    demoUrl: "https://project1-demo.com",
-    codeUrl: "https://github.com/yourusername/project1",
+    image: "/nusa.png",
+    tags: ["Next.js", "Node.js", "Framer-motion"],
+    demoUrl: "https://nusa-landing-page.vercel.app/",
+    codeUrl: "https://github.com/Giorgio-g97/nusa_landing_page",
   },
   {
-    title: "Progetto 2",
+    title: "Saveur Ricettario",
     description: "Una breve descrizione del Progetto 2. Questo progetto dimostra...",
-    image: "/placeholder.svg",
+    image: "/saveur.png",
     tags: ["Next.js", "TypeScript", "Tailwind CSS"],
-    demoUrl: "https://project2-demo.com",
-    codeUrl: "https://github.com/yourusername/project2",
+    demoUrl: "https://saveur-fawn.vercel.app/",
+    codeUrl: "https://github.com/Giorgio-g97/saveur",
   },
   {
     title: "Progetto 3",

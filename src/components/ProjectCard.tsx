@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Button from "./Button";
+import Link from "next/link";
 
 type ProjectCardProps = {
   title: string;
@@ -45,7 +46,12 @@ export default function ProjectCard({
           ))}
         </div>
         <div className="flex justify-between">
-          <Button href={demoUrl} target="_blank" rel="noopener noreferrer">
+          <Button
+            asChild
+            href={demoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Demo Live
           </Button>
           <Button
