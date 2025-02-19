@@ -3,8 +3,10 @@ import type React from "react";
 import Link from "next/link";
 
 type ButtonProps = {
+  asChild: boolean;
   children: React.ReactNode;
   href?: string;
+  target: string;
   variant?: "primary" | "outline";
   className?: string;
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
