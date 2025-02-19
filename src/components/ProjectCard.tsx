@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Button from "./Button";
-import Link from "next/link";
 
 type ProjectCardProps = {
   title: string;
@@ -55,12 +54,13 @@ export default function ProjectCard({
             Demo Live
           </Button>
           <Button
+            asChild
             href={codeUrl}
-            variant="outline"
             target="_blank"
             rel="noopener noreferrer"
+            variant="outline"
           >
-            Vedi Codice
+            Vedi codice{" "}
           </Button>
         </div>
       </div>
