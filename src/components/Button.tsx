@@ -8,8 +8,7 @@ type ButtonProps = {
   variant?: "primary" | "outline";
   className?: string;
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
-  [x: string]: any;
-};
+} & React.HTMLAttributes<HTMLButtonElement | HTMLAnchorElement>;
 
 export default function Button({
   children,
