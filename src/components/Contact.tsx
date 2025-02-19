@@ -70,6 +70,7 @@ export default function Contact() {
         description:
           "Si è verificato un errore nell'invio del messaggio. Riprova più tardi.",
       });
+      console.error(error);
     } finally {
       setIsSubmitting(false);
     }
