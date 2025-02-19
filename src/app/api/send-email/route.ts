@@ -29,7 +29,7 @@ export async function POST(req: Request) {
       { message: "Email inviata con successo!", data },
       { status: 200 }
     );
-  } catch (err: any) {
+  } catch (err) {
     console.error("Errore durante l'invio della mail", err);
     return NextResponse.json({ message: "Errore durante l'invio", err });
   }
