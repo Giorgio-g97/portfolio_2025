@@ -4,7 +4,7 @@ export default function SocialLinks() {
   return (
     <div className="flex space-x-4">
       <a
-        href="https://github.com/yourusername"
+        href="https://github.com/Giorgio-g97"
         target="_blank"
         rel="noopener noreferrer"
         className="text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors"
@@ -12,7 +12,7 @@ export default function SocialLinks() {
         <FaGithub className="text-2xl" />
       </a>
       <a
-        href="https://linkedin.com/in/yourusername"
+        href="www.linkedin.com/in/giorgio-guadagno"
         target="_blank"
         rel="noopener noreferrer"
         className="text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors"
