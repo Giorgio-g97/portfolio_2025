@@ -5,10 +5,7 @@ import { ThemeToggle } from "./ThemeToggle";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
-  SheetClose,
   SheetContent,
-  SheetDescription,
-  SheetFooter,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -78,9 +75,8 @@ export default function Header() {
                 </SheetHeader>
                 <div className="flex flex-col items-end space-y-10 mt-6">
                   {navItems.map((n, i) => (
-                    <SheetTrigger asChild>
+                    <SheetTrigger key={i} asChild>
                       <Link
-                        key={i}
                         href={n.href}
                         className="text-3xl text-foreground/80 dark:text-foreground-dark/80 hover:text-primary dark:hover:text-primary-dark transition-colors"
                       >
