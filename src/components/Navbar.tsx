@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/sheet";
 import { MdMenu } from "react-icons/md";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Header() {
   const navItems = [
@@ -34,12 +35,12 @@ export default function Header() {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 dark:bg-background-dark/80 backdrop-filter backdrop-blur-sm">
-        <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
+        <nav className="container mx-auto px-4 flex justify-between items-center">
           <Link
             href="/"
             className="text-xl font-bold text-foreground dark:text-foreground-dark"
           >
-            G
+            <Image src="/logo_ai.png" width={80} height={80} alt="logo" />
           </Link>
           {/* Desktop Navbar */}
           <div className="hidden md:flex items-center space-x-6">

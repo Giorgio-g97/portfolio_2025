@@ -8,7 +8,7 @@ import { FaCode, FaLaptop, FaMobileAlt } from "react-icons/fa";
 export default function Hero() {
   return (
     <section
-      className="min-h-screen flex items-center justify-center py-20"
+      className="min-h-screen flex items-center justify-center py-32"
       aria-labelledby="hero-title"
     >
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
