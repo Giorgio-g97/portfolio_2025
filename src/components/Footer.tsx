@@ -1,4 +1,4 @@
-import SocialLinks from "./SocialLinks"
+import SocialLinks from "./SocialLinks";
 
 export default function Footer() {
   return (
@@ -6,10 +6,9 @@ export default function Footer() {
       <div className="container mx-auto px-6 flex flex-col items-center">
         <SocialLinks />
         <p className="mt-4 text-sm text-foreground/70 dark:text-foreground-dark/70">
-          © {new Date().getFullYear()} Il Tuo Nome. Tutti i diritti riservati.
+          © {new Date().getFullYear()} Tutti i diritti riservati.
         </p>
       </div>
     </footer>
-  )
+  );
 }
-

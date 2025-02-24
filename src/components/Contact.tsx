@@ -94,7 +94,11 @@ export default function Contact() {
                 <FormItem>
                   <FormLabel>Nome</FormLabel>
                   <FormControl>
-                    <Input placeholder="Il tuo nome" {...field} />
+                    <Input
+                      placeholder="Il tuo nome"
+                      className="dark:placeholder:text-primary-dark"
+                      {...field}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -107,7 +111,11 @@ export default function Contact() {
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input placeholder="La tua email" {...field} />
+                    <Input
+                      placeholder="La tua email"
+                      className="dark:placeholder:text-primary-dark"
+                      {...field}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -120,7 +128,11 @@ export default function Contact() {
                 <FormItem>
                   <FormLabel>Oggetto</FormLabel>
                   <FormControl>
-                    <Input placeholder="Oggetto del messaggio" {...field} />
+                    <Input
+                      placeholder="Oggetto del messaggio"
+                      className="dark:placeholder:text-primary-dark"
+                      {...field}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -133,7 +145,11 @@ export default function Contact() {
                 <FormItem>
                   <FormLabel>Messaggio</FormLabel>
                   <FormControl>
-                    <Textarea placeholder="Il tuo messaggio" {...field} />
+                    <Textarea
+                      placeholder="Il tuo messaggio"
+                      className="dark:placeholder:text-primary-dark"
+                      {...field}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
