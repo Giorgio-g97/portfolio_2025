@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Button from "./Button";
+import { Button } from "./ui/button";
 
 type ProjectCardProps = {
   title: string;
@@ -45,22 +45,25 @@ export default function ProjectCard({
           ))}
         </div>
         <div className="flex justify-between">
-          <Button
-            asChild
-            href={demoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Demo Live
+          <Button className="bg-primary dark:bg-primary-dark text-primary-foreground dark:text-primary-dark-foreground  ">
+            <a
+              href={demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+            >
+              Demo Live
+            </a>
           </Button>
-          <Button
-            asChild
-            href={codeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            variant="outline"
-          >
-            Vedi codice{" "}
+          <Button className="bg-primary dark:bg-primary-dark text-primary-foreground dark:text-primary-dark-foreground ">
+            <a
+              href={codeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+            >
+              Vedi Codice
+            </a>
           </Button>
         </div>
       </div>
