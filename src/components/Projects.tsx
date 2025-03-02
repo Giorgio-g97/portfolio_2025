@@ -21,9 +21,17 @@ const projects = [
     title: "MyGaia",
     description: "Gestionale di prenotazione appuntamenti",
     image: "/mygaia.png",
-    tags: ["Nex.js", "Hygraph", "Descope"],
+    tags: ["Next.js", "Hygraph", "Descope"],
     demoUrl: "https://my-gaia.vercel.app/",
     codeUrl: "https://github.com/Giorgio-g97/MyGaia",
+  },
+  {
+    title: "LeBontaDiCupido",
+    description: "Landing page forno senza glutine",
+    image: "/bontaCupido.png",
+    tags: ["Next.js", "TailwindCSS"],
+    demoUrl: "https://le-bont-di-cupido-site.vercel.app/",
+    codeUrl: "https://github.com/Giorgio-g97/LeBont-DiCupidoSite",
   },
 ];
 
