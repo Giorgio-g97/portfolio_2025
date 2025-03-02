@@ -6,7 +6,6 @@ type ButtonProps = {
   asChild?: boolean;
   children: React.ReactNode;
   href?: string;
-  target?: string;
   variant?: "primary" | "outline";
   className?: string;
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
@@ -17,6 +16,7 @@ export default function Button({
   href,
   variant = "primary",
   className = "",
+  asChild = false,
   ...props
 }: ButtonProps) {
   const baseStyles =
@@ -39,8 +39,8 @@ export default function Button({
   }
 
   return (
-    <Button className={buttonClasses} {...props}>
+    <button className={buttonClasses} {...props}>
       {children}
-    </Button>
+    </button>
   );
 }

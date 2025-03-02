@@ -4,6 +4,7 @@ import Image from "next/image";
 import Button from "./Button";
 import SocialLinks from "./SocialLinks";
 import { FaCode, FaLaptop, FaMobileAlt } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -43,11 +44,18 @@ export default function Hero() {
             esperienza in React, Next.js e Node.js, sono il ponte tra creatività
             e tecnologia che il tuo team sta cercando.
           </p>
-          <div className="flex justify-center md:justify-start space-x-4 animate-fade-in-up animation-delay-600">
+          <div className="flex flex-wrap gap-7 justify-center md:justify-start space-x-4 animate-fade-in-up animation-delay-600">
             <Button href="#projects">Esplora i Progetti</Button>
             <Button href="#contact" variant="outline">
               Contattami
             </Button>
+            <Link
+              className="inline-flex items-center justify-center px-6 py-3 border rounded-full text-sm font-medium transition-all duration-300 bg-transparent text-foreground dark:text-foreground-dark border-current hover:bg-primary/10 dark:hover:bg-primary-dark/10 hover:scale-105"
+              href="https://calendly.com/giorgio-g97/30min"
+              target="_blank"
+            >
+              Prenota una call con me!
+            </Link>
           </div>
           <div className="mt-8 animate-fade-in-up animation-delay-800">
             <SocialLinks />

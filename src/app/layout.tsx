@@ -8,6 +8,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { Toaster } from "@/components/ui/sonner";
+import Whatsapp from "@/components/Whatsapp";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,6 +38,7 @@ export default function RootLayout({
           <main>{children}</main>
           <Toaster />
           <Footer />
+          <Whatsapp />
         </ThemeProvider>
       </body>
     </html>
