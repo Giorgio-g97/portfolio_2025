@@ -16,7 +16,6 @@ export default function Button({
   href,
   variant = "primary",
   className = "",
-  asChild = false,
   ...props
 }: ButtonProps) {
   const baseStyles =
