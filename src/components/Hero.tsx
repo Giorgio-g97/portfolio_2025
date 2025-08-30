@@ -18,7 +18,7 @@ export default function Hero() {
                 Ciao
               </h1>
               <p className="text-base sm:text-lg text-secondary leading-relaxed animate-fade-in-up animation-delay-200 max-w-md">
-                — Sono Giorgio, realizzo siti web
+                — Sono Giorgio, realizzo siti web 2025
               </p>
             </div>
 
