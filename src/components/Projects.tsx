@@ -41,15 +41,15 @@ export default function Projects() {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-5xl lg:text-6xl font-bold text-primary mb-6">
+            <h2 className="text-responsive font-bold text-primary mb-6">
               Progetti in Evidenza
             </h2>
-            <p className="text-secondary text-lg leading-relaxed max-w-2xl mx-auto">
+            <p className="text-secondary text-base sm:text-lg leading-relaxed max-w-2xl mx-auto px-4">
               Una selezione dei miei lavori più significativi che dimostrano la mia esperienza e creatività
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
             {projects.map((project, index) => (
               <div 
                 key={project.title}

@@ -18,6 +18,38 @@
 }
 
 @layer utilities {
+  .text-responsive {
+    @apply text-4xl;
+  }
+  
+  @screen sm {
+    .text-responsive {
+      @apply text-5xl;
+    }
+  }
+  
+  @screen lg {
+    .text-responsive {
+      @apply text-6xl;
+    }
+  }
+  
+  .text-hero-responsive {
+    @apply text-5xl;
+  }
+  
+  @screen sm {
+    .text-hero-responsive {
+      @apply text-6xl;
+    }
+  }
+  
+  @screen lg {
+    .text-hero-responsive {
+      @apply text-7xl;
+    }
+  }
+
   .animate-fade-in {
     animation: fadeIn 0.8s ease-out;
   }

@@ -81,21 +81,21 @@ export default function Contact() {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-5xl lg:text-6xl font-bold text-primary mb-6">
+            <h2 className="text-responsive font-bold text-primary mb-6">
               Contattami
             </h2>
-            <p className="text-secondary text-lg leading-relaxed max-w-2xl mx-auto">
+            <p className="text-secondary text-base sm:text-lg leading-relaxed max-w-2xl mx-auto px-4">
               Hai un progetto in mente? Parliamone insieme e trasformiamo la tua idea in realtà
             </p>
           </div>
           
-          <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-sm">
+          <div className="bg-white rounded-2xl p-6 sm:p-8 lg:p-12 shadow-sm mx-4 sm:mx-0">
             <Form {...form}>
               <form
                 onSubmit={form.handleSubmit(onSubmit)}
-                className="space-y-8"
+                className="space-y-6 sm:space-y-8"
               >
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                   <FormField
                     control={form.control}
                     name="name"
