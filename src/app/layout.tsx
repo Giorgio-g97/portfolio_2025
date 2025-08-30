@@ -1,5 +1,5 @@
 import type React from "react";
-import { Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -10,7 +10,11 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import Whatsapp from "@/components/Whatsapp";
 
-const inter = Inter({ subsets: ["latin"] });
+const dmSans = DM_Sans({ 
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-dm-sans"
+});
 
 export const metadata: Metadata = {
   title: "Giorgio - Sviluppatore Web Full Stack",
@@ -26,20 +30,13 @@ export default function RootLayout({
   return (
     <html lang="it" suppressHydrationWarning className="scroll-smooth">
       <body
-        className={`${inter.className} bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 text-gray-900 dark:text-gray-100`}
+        className={`${dmSans.className} bg-white text-gray-900`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Navbar />
-          <main>{children}</main>
-          <Toaster />
-          <Footer />
-          <Whatsapp />
-        </ThemeProvider>
+        <Navbar />
+        <main>{children}</main>
+        <Toaster />
+        <Footer />
+        <Whatsapp />
       </body>
     </html>
   );

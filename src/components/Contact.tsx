@@ -77,89 +77,108 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-muted dark:bg-muted-dark">
-      <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-8 text-foreground dark:text-foreground-dark">
-          Contattami
-        </h2>
-        <Form {...form}>
-          <form
-            onSubmit={form.handleSubmit(onSubmit)}
-            className="max-w-lg mx-auto space-y-6"
-          >
-            <FormField
-              control={form.control}
-              name="name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Nome</FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder="Il tuo nome"
-                      className="dark:placeholder:text-primary-dark"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Email</FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder="La tua email"
-                      className="dark:placeholder:text-primary-dark"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="subject"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Oggetto</FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder="Oggetto del messaggio"
-                      className="dark:placeholder:text-primary-dark"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="message"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Messaggio</FormLabel>
-                  <FormControl>
-                    <Textarea
-                      placeholder="Il tuo messaggio"
-                      className="dark:placeholder:text-primary-dark"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <Button type="submit" disabled={isSubmitting} className="w-full">
-              {isSubmitting ? "Invio in corso..." : "Invia Messaggio"}
-            </Button>
-          </form>
-        </Form>
+    <section id="contact" className="py-24 bg-tertiary">
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl lg:text-6xl font-bold text-primary mb-6">
+              Contattami
+            </h2>
+            <p className="text-secondary text-lg leading-relaxed max-w-2xl mx-auto">
+              Hai un progetto in mente? Parliamone insieme e trasformiamo la tua idea in realtà
+            </p>
+          </div>
+          
+          <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-sm">
+            <Form {...form}>
+              <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="space-y-8"
+              >
+                <div className="grid md:grid-cols-2 gap-6">
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-primary font-medium">Nome</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Il tuo nome"
+                            className="border-2 border-tertiary focus:border-primary rounded-lg px-4 py-3 bg-tertiary/50 focus:bg-white transition-all duration-300"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-primary font-medium">Email</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="La tua email"
+                            className="border-2 border-tertiary focus:border-primary rounded-lg px-4 py-3 bg-tertiary/50 focus:bg-white transition-all duration-300"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+                
+                <FormField
+                  control={form.control}
+                  name="subject"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-primary font-medium">Oggetto</FormLabel>
+                      <FormControl>
+                        <Input
+                          placeholder="Oggetto del messaggio"
+                          className="border-2 border-tertiary focus:border-primary rounded-lg px-4 py-3 bg-tertiary/50 focus:bg-white transition-all duration-300"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-primary font-medium">Messaggio</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          placeholder="Il tuo messaggio"
+                          className="border-2 border-tertiary focus:border-primary rounded-lg px-4 py-3 bg-tertiary/50 focus:bg-white transition-all duration-300 min-h-[120px] resize-none"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                
+                <Button 
+                  type="submit" 
+                  disabled={isSubmitting} 
+                  className="w-full bg-primary text-white hover:bg-primary/90 py-4 rounded-lg font-medium text-lg tracking-wide transition-all duration-300 disabled:opacity-50"
+                >
+                  {isSubmitting ? "Invio in corso..." : "Invia Messaggio"}
+                </Button>
+              </form>
+            </Form>
+          </div>
+        </div>
       </div>
     </section>
   );

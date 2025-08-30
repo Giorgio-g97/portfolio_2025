@@ -20,25 +20,36 @@ const skills: Skill[] = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 bg-muted dark:bg-muted-dark">
-      <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-12 text-foreground dark:text-foreground-dark">
-          Competenze Tecniche
-        </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
-          {skills.map((skill) => (
-            <div key={skill.name} className="flex flex-col items-center group">
-              <div className="bg-background dark:bg-background-dark p-4 rounded-full shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-110">
-                <skill.icon className="text-4xl text-primary dark:text-primary-dark group-hover:text-secondary dark:group-hover:text-secondary-dark transition-colors duration-300" />
+    <section id="skills" className="py-24 bg-tertiary">
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl lg:text-6xl font-bold text-primary mb-6">
+              Competenze Tecniche
+            </h2>
+            <p className="text-secondary text-lg leading-relaxed max-w-2xl mx-auto">
+              Le tecnologie che utilizzo per creare esperienze digitali eccezionali
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
+            {skills.map((skill, index) => (
+              <div 
+                key={skill.name} 
+                className="group text-center animate-fade-in-up"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 group-hover:-translate-y-2">
+                  <skill.icon className="text-5xl text-primary mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
+                  <span className="text-sm font-medium text-secondary tracking-wide">
+                    {skill.name}
+                  </span>
+                </div>
               </div>
-              <span className="mt-2 text-sm font-medium text-foreground/80 dark:text-foreground-dark/80">
-                {skill.name}
-              </span>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
   )
 }
-

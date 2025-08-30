@@ -2,12 +2,26 @@ import SocialLinks from "./SocialLinks";
 
 export default function Footer() {
   return (
-    <footer className="bg-background dark:bg-background-dark py-8">
-      <div className="container mx-auto px-6 flex flex-col items-center">
-        <SocialLinks />
-        <p className="mt-4 text-sm text-foreground/70 dark:text-foreground-dark/70">
-          © {new Date().getFullYear()} Tutti i diritti riservati.
-        </p>
+    <footer className="bg-primary py-16">
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          <div className="space-y-4">
+            <h3 className="text-2xl font-bold text-white">
+              Iniziamo a lavorare insieme
+            </h3>
+            <p className="text-white/70 text-lg leading-relaxed max-w-2xl mx-auto">
+              Sono sempre aperto a nuove opportunità e collaborazioni interessanti
+            </p>
+          </div>
+          
+          <SocialLinks />
+          
+          <div className="pt-8 border-t border-white/20">
+            <p className="text-white/50 text-sm tracking-wide">
+              © {new Date().getFullYear()} Giorgio Guadagno. Tutti i diritti riservati.
+            </p>
+          </div>
+        </div>
       </div>
     </footer>
   );

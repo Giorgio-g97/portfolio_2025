@@ -37,15 +37,29 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20">
-      <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-8">
-          Progetti in Evidenza
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <ProjectCard key={project.title} {...project} />
-          ))}
+    <section id="projects" className="py-24 bg-white">
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl lg:text-6xl font-bold text-primary mb-6">
+              Progetti in Evidenza
+            </h2>
+            <p className="text-secondary text-lg leading-relaxed max-w-2xl mx-auto">
+              Una selezione dei miei lavori più significativi che dimostrano la mia esperienza e creatività
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            {projects.map((project, index) => (
+              <div 
+                key={project.title}
+                className="animate-fade-in-up"
+                style={{ animationDelay: `${index * 200}ms` }}
+              >
+                <ProjectCard {...project} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

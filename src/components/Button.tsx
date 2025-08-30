@@ -19,12 +19,13 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center px-6 py-3 border rounded-full text-sm font-medium transition-all duration-300";
+    "inline-flex items-center justify-center px-8 py-3 rounded-full font-medium text-sm tracking-wide transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary/20";
+  
   const variantStyles = {
     primary:
-      "bg-primary text-primary-foreground border-transparent hover:bg-primary/90 hover:scale-105 shadow-md hover:shadow-lg",
+      "bg-primary text-white hover:bg-primary/90 shadow-sm hover:shadow-lg",
     outline:
-      "bg-transparent text-foreground dark:text-foreground-dark border-current hover:bg-primary/10 dark:hover:bg-primary-dark/10 hover:scale-105",
+      "border-2 border-primary text-primary hover:bg-primary hover:text-white bg-transparent",
   };
 
   const buttonClasses = `${baseStyles} ${variantStyles[variant]} ${className}`;

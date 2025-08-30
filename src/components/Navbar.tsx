@@ -1,7 +1,6 @@
 "use client";
 import type React from "react";
 import Link from "next/link";
-import { ThemeToggle } from "./ThemeToggle";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -33,65 +32,70 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 dark:bg-background-dark/80 backdrop-filter backdrop-blur-sm">
-        <nav className="container mx-auto px-4 flex justify-between items-center">
-          <Link
-            href="/"
-            className="text-xl font-bold text-foreground dark:text-foreground-dark"
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-tertiary">
+      <nav className="container mx-auto px-6 lg:px-12 flex justify-between items-center h-20">
+        <Link
+          href="/"
+          className="flex items-center"
+        >
+          <Image src="/logo_ai.png" width={50} height={50} alt="Giorgio Logo" className="rounded-full" />
+        </Link>
+        
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center space-x-12">
+          {navItems.map((item, index) => (
+            <Link
+              key={index}
+              href={item.href}
+              className="text-secondary hover:text-primary transition-colors duration-300 font-medium text-sm tracking-wide"
+            >
+              {item.label}
+            </Link>
+          ))}
+          <Button 
+            className="bg-primary text-white hover:bg-primary/90 px-6 py-2 rounded-full font-medium text-sm tracking-wide transition-all duration-300"
           >
-            <Image src="/logo_ai.png" width={80} height={80} alt="logo" />
-          </Link>
-          {/* Desktop Navbar */}
-          <div className="hidden md:flex items-center space-x-6">
-            {navItems.map((n, i) => (
-              <Link
-                key={i}
-                href={n.href}
-                className="text-foreground/80 dark:text-foreground-dark/80 hover:text-primary dark:hover:text-primary-dark transition-colors"
-              >
-                {n.label}
-              </Link>
-            ))}
-            <ThemeToggle />
-          </div>
+            <Link href="#contact">Prenota Call</Link>
+          </Button>
+        </div>
 
-          {/* Mobile Navbar */}
-          <div className="md:hidden flex items-center space-x-4">
-            <Sheet open={isOpen} onOpenChange={setIsOpen}>
-              <SheetTrigger asChild>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="text-foreground dark:text-foreground-dark"
-                >
-                  <MdMenu />
+        {/* Mobile Navigation */}
+        <div className="md:hidden">
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="text-primary hover:bg-tertiary"
+              >
+                <MdMenu className="text-xl" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent className="bg-white border-l border-tertiary">
+              <SheetHeader>
+                <SheetTitle className="text-primary text-xl font-bold">
+                  Menu
+                </SheetTitle>
+              </SheetHeader>
+              <div className="flex flex-col space-y-8 mt-12">
+                {navItems.map((item, index) => (
+                  <SheetTrigger key={index} asChild>
+                    <Link
+                      href={item.href}
+                      className="text-lg text-secondary hover:text-primary transition-colors font-medium"
+                    >
+                      {item.label}
+                    </Link>
+                  </SheetTrigger>
+                ))}
+                <Button className="bg-primary text-white hover:bg-primary/90 w-fit px-6 py-2 rounded-full font-medium">
+                  <Link href="#contact">Prenota Call</Link>
                 </Button>
-              </SheetTrigger>
-              <SheetContent>
-                <SheetHeader>
-                  <SheetTitle className="text-right text-primary dark:text-primary-dark text-4xl mt-6">
-                    Menu
-                  </SheetTitle>
-                </SheetHeader>
-                <div className="flex flex-col items-end space-y-10 mt-6">
-                  {navItems.map((n, i) => (
-                    <SheetTrigger key={i} asChild>
-                      <Link
-                        href={n.href}
-                        className="text-3xl text-foreground/80 dark:text-foreground-dark/80 hover:text-primary dark:hover:text-primary-dark transition-colors"
-                      >
-                        {n.label}
-                      </Link>
-                    </SheetTrigger>
-                  ))}
-                </div>
-              </SheetContent>
-            </Sheet>
-            <ThemeToggle />
-          </div>
-        </nav>
-      </header>
-    </>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
+      </nav>
+    </header>
   );
 }

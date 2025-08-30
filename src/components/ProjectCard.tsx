@@ -19,48 +19,59 @@ export default function ProjectCard({
   codeUrl,
 }: ProjectCardProps) {
   return (
-    <div className="bg-background dark:bg-background-dark rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
-      <Image
-        src={image || "/placeholder.svg"}
-        alt={title}
-        width={400}
-        height={200}
-        className="w-full h-48 object-cover"
-      />
-      <div className="p-6">
-        <h3 className="text-xl font-semibold mb-2 text-foreground dark:text-foreground-dark">
-          {title}
-        </h3>
-        <p className="text-foreground/70 dark:text-foreground-dark/70 mb-4">
-          {description}
-        </p>
-        <div className="flex flex-wrap gap-2 mb-4">
+    <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+      <div className="relative overflow-hidden">
+        <Image
+          src={image || "/placeholder.svg"}
+          alt={title}
+          width={500}
+          height={300}
+          className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+        />
+        <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-500"></div>
+      </div>
+      
+      <div className="p-8 space-y-6">
+        <div className="space-y-3">
+          <h3 className="text-2xl font-bold text-primary group-hover:text-primary/80 transition-colors">
+            {title}
+          </h3>
+          <p className="text-secondary leading-relaxed">
+            {description}
+          </p>
+        </div>
+        
+        <div className="flex flex-wrap gap-2">
           {tags.map((tag) => (
             <span
               key={tag}
-              className="bg-foreground dark:bg-foreground-dark text-background dark:text-background-dark px-2 py-1 rounded-md text-sm"
+              className="bg-tertiary text-secondary px-3 py-1 rounded-full text-sm font-medium tracking-wide"
             >
               {tag}
             </span>
           ))}
         </div>
-        <div className="flex justify-between">
-          <Button className="bg-primary dark:bg-primary-dark text-primary-foreground dark:text-primary-dark-foreground  ">
+        
+        <div className="flex gap-4 pt-4">
+          <Button className="bg-primary text-white hover:bg-primary/90 px-6 py-2 rounded-full font-medium text-sm tracking-wide transition-all duration-300 flex-1">
             <a
               href={demoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+              className="block w-full"
             >
               Demo Live
             </a>
           </Button>
-          <Button className="bg-primary dark:bg-primary-dark text-primary-foreground dark:text-primary-dark-foreground ">
+          <Button 
+            variant="outline"
+            className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-2 rounded-full font-medium text-sm tracking-wide transition-all duration-300 flex-1"
+          >
             <a
               href={codeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+              className="block w-full"
             >
               Vedi Codice
             </a>
