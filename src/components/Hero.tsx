@@ -3,7 +3,7 @@ import type React from "react";
 import Image from "next/image";
 import Button from "./Button";
 import SocialLinks from "./SocialLinks";
-import Link from "next/link";
+// import Link from "next/link";
 
 export default function Hero() {
   return (
