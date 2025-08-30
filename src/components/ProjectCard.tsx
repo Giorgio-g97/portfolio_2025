@@ -7,7 +7,7 @@ type ProjectCardProps = {
   image: string;
   tags: string[];
   demoUrl: string;
-  codeUrl: string;
+  codeUrl?: string;
 };
 
 export default function ProjectCard({

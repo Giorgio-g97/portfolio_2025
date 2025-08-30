@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetHeader,
   SheetTitle,
@@ -55,7 +56,7 @@ export default function Header() {
           <Button 
             className="bg-primary text-white hover:bg-primary/90 px-6 py-2 rounded-full font-medium text-sm tracking-wide transition-all duration-300"
           >
-            <Link href="#contact">Prenota Call</Link>
+            <Link href="https://calendly.com/giorgio-g97/30min" target="_blank">Prenota Call</Link>
           </Button>
         </div>
 
@@ -89,7 +90,9 @@ export default function Header() {
                   </SheetTrigger>
                 ))}
                 <Button className="bg-primary text-white hover:bg-primary/90 w-fit px-6 py-2 rounded-full font-medium">
-                  <Link href="#contact">Prenota Call</Link>
+                  <Link href="https://calendly.com/giorgio-g97/30min" target="_blank" >
+                  <SheetClose>Prenota Call</SheetClose>
+                  </Link>
                 </Button>
               </div>
             </SheetContent>

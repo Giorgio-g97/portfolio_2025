@@ -33,6 +33,13 @@ const projects = [
     demoUrl: "https://le-bont-di-cupido-site.vercel.app/",
     codeUrl: "https://github.com/Giorgio-g97/LeBont-DiCupidoSite",
   },
+  {
+    title: "Parrocchia Sant'Antonio",
+    description: "Sito web ufficiale parrocchia",
+    image: "/sant_antonio.png",
+    tags: ["Wordpress"],
+    demoUrl: "https://santantoniofoggia.altervista.org/",
+  },
 ];
 
 export default function Projects() {
@@ -45,13 +52,14 @@ export default function Projects() {
               Progetti in Evidenza
             </h2>
             <p className="text-secondary text-base sm:text-lg leading-relaxed max-w-2xl mx-auto px-4">
-              Una selezione dei miei lavori più significativi che dimostrano la mia esperienza e creatività
+              Una selezione dei miei lavori più significativi che dimostrano la
+              mia esperienza e creatività
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
             {projects.map((project, index) => (
-              <div 
+              <div
                 key={project.title}
                 className="animate-fade-in-up"
                 style={{ animationDelay: `${index * 200}ms` }}

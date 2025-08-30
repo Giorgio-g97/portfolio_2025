@@ -1,6 +1,6 @@
 import type { IconType } from "react-icons"
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs } from "react-icons/fa"
-import { SiNextdotjs, SiTypescript, SiMongodb } from "react-icons/si"
+import { SiNextdotjs, SiTypescript, SiMongodb, SiWordpress } from "react-icons/si"
 
 type Skill = {
   name: string
@@ -16,6 +16,7 @@ const skills: Skill[] = [
   { name: "Node.js", icon: FaNodeJs },
   { name: "TypeScript", icon: SiTypescript },
   { name: "MongoDB", icon: SiMongodb },
+  { name: "Wordpress", icon: SiWordpress },
 ]
 
 export default function Skills() {
@@ -32,7 +33,7 @@ export default function Skills() {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 px-16 sm:grid-cols-3 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {skills.map((skill, index) => (
               <div 
                 key={skill.name} 

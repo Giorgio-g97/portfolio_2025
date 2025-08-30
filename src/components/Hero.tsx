@@ -3,6 +3,7 @@ import type React from "react";
 import Image from "next/image";
 import Button from "./Button";
 import SocialLinks from "./SocialLinks";
+import Link from "next/link";
 // import Link from "next/link";
 
 export default function Hero() {
@@ -18,7 +19,7 @@ export default function Hero() {
                 Ciao
               </h1>
               <p className="text-base sm:text-lg text-secondary leading-relaxed animate-fade-in-up animation-delay-200 max-w-md">
-                — Sono Giorgio, realizzo siti web 2025
+                sono Giorgio – Web Developer
               </p>
             </div>
 
@@ -28,27 +29,36 @@ export default function Hero() {
                 Sviluppatore Web Full Stack
               </h2>
               <p className="text-sm sm:text-base text-secondary leading-relaxed max-w-lg">
-                Trasformo visioni digitali in realtà tangibili. Con una solida
-                esperienza in React, Next.js e Node.js, sono il ponte tra
-                creatività e tecnologia che il tuo team sta cercando.
+                Costruisco siti web moderni, performanti e su misura.
               </p>
             </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-600">
-              <Button
-                href="#projects"
-                className="bg-primary text-white hover:bg-primary/90 px-6 sm:px-8 py-3 rounded-full font-medium tracking-wide transition-all duration-300 text-center"
-              >
-                Esplora i Progetti
-              </Button>
-              <Button
-                href="#contact"
-                variant="outline"
-                className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 sm:px-8 py-3 rounded-full font-medium tracking-wide transition-all duration-300 text-center"
-              >
-                Contattami
-              </Button>
+              <div className="flex gap-4">
+                <Button
+                  href="#projects"
+                  className="bg-primary text-white hover:bg-primary/90 px-6 sm:px-8 py-3 rounded-full font-medium tracking-wide transition-all duration-300 text-center"
+                >
+                  Esplora i Progetti
+                </Button>
+                <Button
+                  href="#contact"
+                  variant="outline"
+                  className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 sm:px-8 py-3 rounded-full font-medium tracking-wide transition-all duration-300 text-center"
+                >
+                  Contattami
+                </Button>
+              </div>
+                <Button
+                  className="bg-[#2285ff] text-white hover:bg-primary/90 px-6 sm:px-8 py-3 rounded-full font-medium tracking-wide transition-all duration-300 text-center flex"
+                >
+                  <Link 
+                  href="https://calendly.com/giorgio-g97/30min"
+                  target="_blank">
+                  Prenota una Call!
+                  </Link>
+                </Button>
             </div>
 
             {/* Social Links */}
