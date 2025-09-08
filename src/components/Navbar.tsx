@@ -27,6 +27,10 @@ export default function Header() {
       label: "Contatti",
       href: "#contact",
     },
+    {
+      label: "Servizi",
+      href:"#services"
+    }
   ];
 
   const [isOpen, setIsOpen] = useState(false);

@@ -1,11 +1,16 @@
-import type { IconType } from "react-icons"
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs } from "react-icons/fa"
-import { SiNextdotjs, SiTypescript, SiMongodb, SiWordpress } from "react-icons/si"
+import type { IconType } from "react-icons";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
+import {
+  SiNextdotjs,
+  SiTypescript,
+  SiMongodb,
+  SiWordpress,
+} from "react-icons/si";
 
 type Skill = {
-  name: string
-  icon: IconType
-}
+  name: string;
+  icon: IconType;
+};
 
 const skills: Skill[] = [
   { name: "HTML5", icon: FaHtml5 },
@@ -17,7 +22,7 @@ const skills: Skill[] = [
   { name: "TypeScript", icon: SiTypescript },
   { name: "MongoDB", icon: SiMongodb },
   { name: "Wordpress", icon: SiWordpress },
-]
+];
 
 export default function Skills() {
   return (
@@ -29,14 +34,15 @@ export default function Skills() {
               Competenze Tecniche
             </h2>
             <p className="text-secondary text-base sm:text-lg leading-relaxed max-w-2xl mx-auto px-4">
-              Le tecnologie che utilizzo per creare esperienze digitali eccezionali
+              Le tecnologie che utilizzo per creare esperienze digitali
+              eccezionali
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 px-16 sm:grid-cols-3 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {skills.map((skill, index) => (
-              <div 
-                key={skill.name} 
+              <div
+                key={skill.name}
                 className="group text-center animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
@@ -52,5 +58,5 @@ export default function Skills() {
         </div>
       </div>
     </section>
-  )
+  );
 }
