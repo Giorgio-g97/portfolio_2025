@@ -15,26 +15,26 @@ export default function Hero() {
           <div className="space-y-6 sm:space-y-8 lg:space-y-12 order-2 lg:order-1">
             {/* Main Heading */}
             <div className="space-y-6">
-              <h1 className="text-hero-responsive font-bold text-primary leading-tight animate-fade-in-up">
-                Ciao
+              <h1 className="text-hero-responsive font-bold text-secondary leading-tight animate-fade-in-up">
+                Il tuo <p className="text-primary">business</p> merita un sito
+                web che <p className="text-primary">converte.</p>
               </h1>
-              <p className="text-base sm:text-lg text-secondary leading-relaxed animate-fade-in-up animation-delay-200 max-w-md">
-                sono Giorgio – Web Developer
-              </p>
+              <h1 className="text-hero-responsive font-bold text-secondary leading-tight animate-fade-in-up">
+                Io lo creo per <p className="text-primary">te.</p>
+              </h1>
             </div>
 
             {/* Description */}
             <div className="space-y-6 animate-fade-in-up animation-delay-400">
-              <h2 className="text-xl sm:text-2xl font-bold text-primary">
-                Sviluppatore Web Full Stack
+              <h2 className="text-xl sm:text-2xl font-bold text-secondary">
+                Trasformo le tue idee in siti web veloci, belli da vedere e
+                ottimizzati per trovare nuovi clienti. Specializzato in Landing
+                Page, Siti Vetrina ed E-commerce.
               </h2>
-              <p className="text-sm sm:text-base text-secondary leading-relaxed max-w-lg">
-                Costruisco siti web moderni, performanti e su misura.
-              </p>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-600">
+            <div className="pt-10 flex flex-col items-center sm:flex-row gap-4 animate-fade-in-up animation-delay-600">
               <div className="flex gap-4">
                 <Button
                   href="#projects"
@@ -42,23 +42,19 @@ export default function Hero() {
                 >
                   Esplora i Progetti
                 </Button>
-                <Button
-                  href="#contact"
-                  variant="outline"
-                  className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 sm:px-8 py-3 rounded-full font-medium tracking-wide transition-all duration-300 text-center"
-                >
-                  Contattami
-                </Button>
               </div>
+
+              <Link
+                href="https://calendly.com/giorgio-g97/30min"
+                target="_blank"
+              >
                 <Button
-                  className="bg-[#2285ff] text-white hover:bg-primary/90 px-6 sm:px-8 py-3 rounded-full font-medium tracking-wide transition-all duration-300 text-center flex"
+                  variant="outline"
+                  className="bg-[#2285ff] text-black hover:bg-primary/90 px-6 sm:px-8 py-3 rounded-full font-extrabold tracking-wide transition-all duration-300 text-center flex"
                 >
-                  <Link 
-                  href="https://calendly.com/giorgio-g97/30min"
-                  target="_blank">
                   Prenota una Call!
-                  </Link>
                 </Button>
+              </Link>
             </div>
 
             {/* Social Links */}
@@ -70,7 +66,7 @@ export default function Hero() {
           {/* Right Image */}
           <div className="relative order-1 lg:order-2 animate-fade-in">
             <div className="relative">
-              <div className="absolute inset-0 bg-tertiary rounded-2xl transform rotate-3 hidden sm:block"></div>
+              <div className="absolute inset-0 bg-tertiary rounded-2xl transform rotate-12 hidden sm:block shadow-lg"></div>
               <div className="relative bg-white rounded-2xl overflow-hidden shadow-2xl max-w-sm sm:max-w-none mx-auto">
                 <Image
                   src="/hero.jpg"
