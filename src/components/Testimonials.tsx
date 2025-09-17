@@ -12,15 +12,15 @@ type Testimonial = {
 };
 
 const testimonials: Testimonial[] = [
-  {
-    name: "Padre Gianluca",
-    role: "Parroco",
-    company: "Parrocchia Sant'Antonio Foggia",
-    quote:
-      "In 2 mesi abbiamo aumentato le prenotazioni del 300% grazie al nuovo sito. I clienti ci trovano e prenotano con facilità.",
-    image: "/window.svg",
-    result: "+1.000 visualizzazioni in meno di un mese",
-  }
+  // {
+  //   name: "Padre Gianluca",
+  //   role: "Parroco",
+  //   company: "Parrocchia Sant'Antonio Foggia",
+  //   quote:
+  //     "In 2 mesi abbiamo aumentato le prenotazioni del 300% grazie al nuovo sito. I clienti ci trovano e prenotano con facilità.",
+  //   image: "/window.svg",
+  //   result: "+1.000 visualizzazioni in meno di un mese",
+  // }
 ];
 
 export default function Testimonials() {
