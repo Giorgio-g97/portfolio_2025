@@ -16,50 +16,42 @@ export default function Hero() {
             {/* Main Heading */}
             <div className="space-y-6">
               <h1 className="text-hero-responsive font-bold text-secondary leading-tight animate-fade-in-up">
-                Il tuo <p className="text-primary">business</p> merita un sito
-                web che <p className="text-primary">converte.</p>
-              </h1>
-              <h1 className="text-hero-responsive font-bold text-secondary leading-tight animate-fade-in-up">
-                Io lo creo per <p className="text-primary">te.</p>
+                Aumento le vendite del tuo{" "}
+                <span className="text-primary">business</span> con siti web che
+                <span className="text-primary"> convertono</span>
               </h1>
             </div>
 
             {/* Description */}
             <div className="space-y-6 animate-fade-in-up animation-delay-400">
               <h2 className="text-xl sm:text-2xl font-bold text-secondary">
-                Trasformo le tue idee in siti web veloci, belli da vedere e
-                ottimizzati per trovare nuovi clienti. Specializzato in Landing
-                Page, Siti Vetrina ed E-commerce.
+                In 30–60 giorni trasformo i tuoi visitatori in clienti paganti
+                con landing page, siti vetrina ed e‑commerce ottimizzati a
+                performance.
               </h2>
             </div>
 
             {/* CTA Buttons */}
             <div className="pt-10 flex flex-col items-center sm:flex-row gap-4 animate-fade-in-up animation-delay-600">
               <div className="flex gap-4">
-                <Button
-                  href="#projects"
-                  className="bg-primary text-white hover:bg-primary/90 px-6 sm:px-8 py-3 rounded-full font-medium tracking-wide transition-all duration-300 text-center"
-                >
-                  Esplora i Progetti
-                </Button>
+                <Link href={"#projects"}>
+                  <Button
+                    variant="outline"
+                    className="bg-[#2285ff] text-black hover:bg-primary/90 px-6 sm:px-8 py-3 rounded-full font-extrabold tracking-wide transition-all duration-300 text-center flex"
+                  >
+                    Esplora i Progetti
+                  </Button>
+                </Link>
               </div>
 
               <Link
                 href="https://calendly.com/giorgio-g97/30min"
                 target="_blank"
               >
-                <Button
-                  variant="outline"
-                  className="bg-[#2285ff] text-black hover:bg-primary/90 px-6 sm:px-8 py-3 rounded-full font-extrabold tracking-wide transition-all duration-300 text-center flex"
-                >
-                  Prenota una Call!
+                <Button className=" text-black hover:bg-primary/90 px-6 sm:px-8 py-3 rounded-full font-extrabold tracking-wide transition-all duration-300 text-center flex">
+                  Prenota una Call
                 </Button>
               </Link>
-            </div>
-
-            {/* Social Links */}
-            <div className="animate-fade-in-up animation-delay-800">
-              <SocialLinks />
             </div>
           </div>
 

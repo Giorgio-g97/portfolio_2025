@@ -29,8 +29,8 @@ export default function Header() {
     },
     {
       label: "Servizi",
-      href:"#services"
-    }
+      href: "#services",
+    },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -59,11 +59,11 @@ export default function Header() {
               {item.label}
             </Link>
           ))}
-          <Button className="bg-primary text-white hover:bg-primary/90 px-6 py-2 rounded-full font-medium text-sm tracking-wide transition-all duration-300">
-            <Link href="https://calendly.com/giorgio-g97/30min" target="_blank">
-              Prenota Call
-            </Link>
-          </Button>
+          <Link href="https://calendly.com/giorgio-g97/30min" target="_blank">
+            <Button className=" text-white hover:bg-primary/90 px-6 sm:px-8 py-3 rounded-full font-extrabold tracking-wide transition-all duration-300 text-center flex">
+              Prenota una Call
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile Navigation */}
@@ -97,10 +97,13 @@ export default function Header() {
                 ))}
 
                 <Button className="bg-primary text-white hover:bg-primary/90 px-6 py-2 rounded-full font-medium text-sm tracking-wide transition-all duration-300">
-            <Link href="https://calendly.com/giorgio-g97/30min" target="_blank">
-              Prenota Call
-            </Link>
-          </Button>
+                  <Link
+                    href="https://calendly.com/giorgio-g97/30min"
+                    target="_blank"
+                  >
+                    Prenota Call
+                  </Link>
+                </Button>
               </div>
             </SheetContent>
           </Sheet>
