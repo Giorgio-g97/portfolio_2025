@@ -40,6 +40,13 @@ const projects = [
     tags: ["Wordpress"],
     demoUrl: "https://santantoniofoggia.altervista.org/",
   },
+  {
+    title: "Nicola spadaccino Orafo",
+    description: "Sito web ufficiale portfolio",
+    image: "/screen-nicola-spad.png",
+    tags: ["Next.js", "TailwindCSS"],
+    demoUrl: "https://nicola-spadaccino.vercel.app/",
+  }
 ];
 
 export default function Projects() {

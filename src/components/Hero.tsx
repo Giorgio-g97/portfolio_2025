@@ -16,18 +16,23 @@ export default function Hero() {
             {/* Main Heading */}
             <div className="space-y-6">
               <h1 className="text-hero-responsive font-bold text-secondary leading-tight animate-fade-in-up">
-                Aumento le vendite del tuo{" "}
-                <span className="text-primary">business</span> con siti web che
-                <span className="text-primary"> convertono</span>
+                Il tuo{" "}
+                <br />
+                <span className="text-primary">business</span>
+                <br />
+                merita un sito web che
+                <span className="text-primary"> converte.</span>
+                <br />
+                <span className="text-secondary">Io lo creo per</span>
+                <br />
+                <span className="text-primary"> te.</span>
               </h1>
             </div>
 
             {/* Description */}
             <div className="space-y-6 animate-fade-in-up animation-delay-400">
               <h2 className="text-xl sm:text-2xl font-bold text-secondary">
-                In 30–60 giorni trasformo i tuoi visitatori in clienti paganti
-                con landing page, siti vetrina ed e‑commerce ottimizzati a
-                performance.
+                Trasformo le tue idee in siti web veloci, belli da vedere e ottimizzati per trovare nuovi clienti. Specializzato in Landing Page, Siti Vetrina ed E-commerce.
               </h2>
             </div>
 

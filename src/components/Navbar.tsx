@@ -40,11 +40,11 @@ export default function Header() {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-12 flex justify-between items-center h-16 sm:h-20">
         <Link href="/" className="flex items-center">
           <Image
-            src="/logo_ai.png"
-            width={50}
-            height={50}
+            src="/transparent-image.png"
+            width={100}
+            height={100}
             alt="Giorgio Logo"
-            className="rounded-full w-[100px] h-[100px] md:w-[120px] md:h-[120px]"
+            className="rounded-full w-[60px] h-[60px] md:w-[80px] md:h-[80px]"
           />
         </Link>
 
