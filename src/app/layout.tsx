@@ -9,6 +9,7 @@ import "./globals.css";
 
 import { Toaster } from "@/components/ui/sonner";
 import Whatsapp from "@/components/Whatsapp";
+import Script from 'next/script';
 
 const dmSans = DM_Sans({ 
   subsets: ["latin"],
@@ -32,7 +33,7 @@ export default function RootLayout({
       <body
         className={`${dmSans.className} bg-white text-gray-900`}
       >
-        <script type="text/javascript" src="https://embeds.iubenda.com/widgets/47a49fd8-7c0d-45cc-bd2c-f7a8333a0860.js"></script>
+        <Script type="text/javascript" src="https://embeds.iubenda.com/widgets/47a49fd8-7c0d-45cc-bd2c-f7a8333a0860.js"></Script>
         <Navbar />
         <main>{children}</main>
         <Toaster />
