@@ -33,9 +33,9 @@ export default function RootLayout({
       <body
         className={`${dmSans.className} bg-white text-gray-900`}
       >
-        <Script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="ad8eca1d-5bdf-4e2e-b22f-29f1fc42c9de" type="text/javascript"></Script>
-        <Script id="CookieDeclaration" src="https://consent.cookiebot.com/ad8eca1d-5bdf-4e2e-b22f-29f1fc42c9de/cd.js" type="text/javascript" async></Script>
-        {/* <Script type="text/javascript" src="https://embeds.iubenda.com/widgets/47a49fd8-7c0d-45cc-bd2c-f7a8333a0860.js"></Script> */}
+        {/* <Script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="ad8eca1d-5bdf-4e2e-b22f-29f1fc42c9de" type="text/javascript"></Script>
+        <Script id="CookieDeclaration" src="https://consent.cookiebot.com/ad8eca1d-5bdf-4e2e-b22f-29f1fc42c9de/cd.js" type="text/javascript" async></Script> */}
+        <Script type="text/javascript" src="https://embeds.iubenda.com/widgets/47a49fd8-7c0d-45cc-bd2c-f7a8333a0860.js"></Script>
         <Navbar />
         <main>{children}</main>
         <Toaster />
