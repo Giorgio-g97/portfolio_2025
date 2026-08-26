@@ -21,10 +21,10 @@ const skills: Skill[] = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 bg-tertiary">
+    <section id="skills" className="py-16 sm:py-24 bg-tertiary">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-20">
+          <div className="text-center mb-12 sm:mb-20">
             <h2 className="text-responsive font-bold text-primary mb-6">
               Competenze Tecniche
             </h2>
@@ -33,7 +33,7 @@ export default function Skills() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 px-16 sm:grid-cols-3 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {skills.map((skill, index) => (
               <div 
                 key={skill.name} 

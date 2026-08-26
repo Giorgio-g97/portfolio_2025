@@ -14,7 +14,7 @@ export default function Footer() {
             </p>
           </div>
           
-          <SocialLinks />
+          <SocialLinks variant="dark" />
           
           <div className="pt-8 border-t border-white/20">
             <p className="text-white/50 text-sm tracking-wide">

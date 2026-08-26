@@ -40,7 +40,7 @@ export default function Header() {
             width={50}
             height={50}
             alt="Giorgio Logo"
-            className="rounded-full w-[100px] h-[100px] md:w-[120px] md:h-[120px]"
+            className="rounded-full w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] md:w-[60px] md:h-[60px]"
           />
         </Link>
 

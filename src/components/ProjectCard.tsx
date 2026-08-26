@@ -63,19 +63,21 @@ export default function ProjectCard({
               Demo Live
             </a>
           </Button>
-          <Button 
-            variant="outline"
-            className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-4 sm:px-6 py-2 rounded-full font-medium text-xs sm:text-sm tracking-wide transition-all duration-300 flex-1"
-          >
-            <a
-              href={codeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full"
+          {codeUrl && (
+            <Button
+              variant="outline"
+              className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-4 sm:px-6 py-2 rounded-full font-medium text-xs sm:text-sm tracking-wide transition-all duration-300 flex-1"
             >
-              Vedi Codice
-            </a>
-          </Button>
+              <a
+                href={codeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full"
+              >
+                Vedi Codice
+              </a>
+            </Button>
+          )}
         </div>
       </div>
     </div>

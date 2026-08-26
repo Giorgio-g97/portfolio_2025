@@ -77,10 +77,10 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 bg-tertiary">
+    <section id="contact" className="py-16 sm:py-24 bg-tertiary">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-20">
+          <div className="text-center mb-12 sm:mb-20">
             <h2 className="text-responsive font-bold text-primary mb-6">
               Contattami
             </h2>

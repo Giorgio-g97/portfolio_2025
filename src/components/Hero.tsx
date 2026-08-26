@@ -12,14 +12,14 @@ export default function Hero() {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-24 items-center">
           {/* Left Content */}
-          <div className="space-y-6 sm:space-y-8 lg:space-y-12 order-2 lg:order-1">
+          <div className="space-y-4 sm:space-y-6 lg:space-y-12 order-2 lg:order-1">
             {/* Main Heading */}
-            <div className="space-y-6">
-              <h1 className="text-hero-responsive font-bold text-primary leading-tight animate-fade-in-up">
+            <div className="space-y-4 sm:space-y-6">
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-primary leading-tight animate-fade-in-up">
                 Ciao
               </h1>
-              <p className="text-base sm:text-lg text-secondary leading-relaxed animate-fade-in-up animation-delay-200 max-w-md">
-                sono Giorgio – Web Developer
+              <p className="text-lg sm:text-xl lg:text-2xl text-primary font-medium leading-relaxed animate-fade-in-up animation-delay-200 max-w-md">
+                Sono Giorgio, realizzo siti web e web app su misura
               </p>
             </div>
 
@@ -34,31 +34,31 @@ export default function Hero() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-600">
-              <div className="flex gap-4">
-                <Button
-                  href="#projects"
-                  className="bg-primary text-white hover:bg-primary/90 px-6 sm:px-8 py-3 rounded-full font-medium tracking-wide transition-all duration-300 text-center"
-                >
-                  Esplora i Progetti
-                </Button>
-                <Button
-                  href="#contact"
-                  variant="outline"
-                  className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 sm:px-8 py-3 rounded-full font-medium tracking-wide transition-all duration-300 text-center"
-                >
-                  Contattami
-                </Button>
-              </div>
-                <Button
-                  className="bg-[#2285ff] text-white hover:bg-primary/90 px-6 sm:px-8 py-3 rounded-full font-medium tracking-wide transition-all duration-300 text-center flex"
-                >
-                  <Link 
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:flex-nowrap sm:gap-4 animate-fade-in-up animation-delay-600">
+              <Button
+                href="#projects"
+                className="bg-primary text-white hover:bg-primary/90 px-6 sm:px-8 py-3 rounded-full font-medium tracking-wide transition-all duration-300 text-center w-full sm:w-auto"
+              >
+                Esplora i Progetti
+              </Button>
+              <Button
+                href="#contact"
+                variant="outline"
+                className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 sm:px-8 py-3 rounded-full font-medium tracking-wide transition-all duration-300 text-center w-full sm:w-auto"
+              >
+                Contattami
+              </Button>
+              <Button
+                className="bg-[#2285ff] text-white hover:bg-[#2285ff]/90 px-6 sm:px-8 py-3 rounded-full font-medium tracking-wide transition-all duration-300 text-center w-full sm:w-auto"
+              >
+                <Link
                   href="https://calendly.com/giorgio-g97/30min"
-                  target="_blank">
+                  target="_blank"
+                  className="w-full"
+                >
                   Prenota una Call!
-                  </Link>
-                </Button>
+                </Link>
+              </Button>
             </div>
 
             {/* Social Links */}
@@ -77,7 +77,7 @@ export default function Hero() {
                   alt="Giorgio"
                   width={500}
                   height={600}
-                  className="object-cover w-full h-[400px] sm:h-[500px] lg:h-[600px]"
+                  className="object-cover w-full h-[300px] sm:h-[500px] lg:h-[600px]"
                   priority
                 />
               </div>

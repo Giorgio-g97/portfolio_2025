@@ -44,10 +44,10 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 bg-white">
+    <section id="projects" className="py-16 sm:py-24 bg-white">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-20">
+          <div className="text-center mb-12 sm:mb-20">
             <h2 className="text-responsive font-bold text-primary mb-6">
               Progetti in Evidenza
             </h2>
