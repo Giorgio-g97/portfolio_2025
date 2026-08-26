@@ -27,10 +27,6 @@ export default function Header() {
       label: "Contatti",
       href: "#contact",
     },
-    {
-      label: "Servizi",
-      href: "#services",
-    },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -40,11 +36,11 @@ export default function Header() {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-12 flex justify-between items-center h-16 sm:h-20">
         <Link href="/" className="flex items-center">
           <Image
-            src="/transparent-image.png"
-            width={100}
-            height={100}
+            src="/logo_ai.png"
+            width={50}
+            height={50}
             alt="Giorgio Logo"
-            className="rounded-full w-[60px] h-[60px] md:w-[80px] md:h-[80px]"
+            className="rounded-full w-[100px] h-[100px] md:w-[120px] md:h-[120px]"
           />
         </Link>
 
@@ -59,11 +55,11 @@ export default function Header() {
               {item.label}
             </Link>
           ))}
-          <Link href="https://calendly.com/giorgio-g97/30min" target="_blank">
-            <Button className=" text-white hover:bg-primary/90 px-6 sm:px-8 py-3 rounded-full font-extrabold tracking-wide transition-all duration-300 text-center flex">
-              Prenota una Call
-            </Button>
-          </Link>
+          <Button className="bg-primary text-white hover:bg-primary/90 px-6 py-2 rounded-full font-medium text-sm tracking-wide transition-all duration-300">
+            <Link href="https://calendly.com/giorgio-g97/30min" target="_blank">
+              Prenota Call
+            </Link>
+          </Button>
         </div>
 
         {/* Mobile Navigation */}
@@ -97,13 +93,10 @@ export default function Header() {
                 ))}
 
                 <Button className="bg-primary text-white hover:bg-primary/90 px-6 py-2 rounded-full font-medium text-sm tracking-wide transition-all duration-300">
-                  <Link
-                    href="https://calendly.com/giorgio-g97/30min"
-                    target="_blank"
-                  >
-                    Prenota Call
-                  </Link>
-                </Button>
+            <Link href="https://calendly.com/giorgio-g97/30min" target="_blank">
+              Prenota Call
+            </Link>
+          </Button>
               </div>
             </SheetContent>
           </Sheet>

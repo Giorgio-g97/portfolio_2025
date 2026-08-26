@@ -9,9 +9,8 @@ import "./globals.css";
 
 import { Toaster } from "@/components/ui/sonner";
 import Whatsapp from "@/components/Whatsapp";
-import Script from 'next/script';
 
-const dmSans = DM_Sans({
+const dmSans = DM_Sans({ 
   subsets: ["latin"],
   weight: ["400", "500", "700"],
   variable: "--font-dm-sans"
@@ -33,7 +32,6 @@ export default function RootLayout({
       <body
         className={`${dmSans.className} bg-white text-gray-900`}
       >
-        <Script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/746cc3e1902063d78831f0295cc0410d/script.js" async></Script>
         <Navbar />
         <main>{children}</main>
         <Toaster />
