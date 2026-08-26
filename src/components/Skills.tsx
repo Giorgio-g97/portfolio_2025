@@ -1,56 +1,12 @@
-import type { IconType } from "react-icons"
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs } from "react-icons/fa"
-import { SiNextdotjs, SiTypescript, SiMongodb, SiWordpress } from "react-icons/si"
+import type { IconType } from "react-icons";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
+import { SiNextdotjs, SiTypescript, SiMongodb, SiWordpress } from "react-icons/si";
 
-type Skill = {
-  name: string
-  icon: IconType
-}
-
+type Skill = { name: string; icon: IconType };
 const skills: Skill[] = [
-  { name: "HTML5", icon: FaHtml5 },
-  { name: "CSS3", icon: FaCss3Alt },
-  { name: "JavaScript", icon: FaJs },
-  { name: "React", icon: FaReact },
-  { name: "Next.js", icon: SiNextdotjs },
-  { name: "Node.js", icon: FaNodeJs },
-  { name: "TypeScript", icon: SiTypescript },
-  { name: "MongoDB", icon: SiMongodb },
-  { name: "Wordpress", icon: SiWordpress },
-]
+  { name: "HTML5", icon: FaHtml5 }, { name: "CSS3", icon: FaCss3Alt }, { name: "JavaScript", icon: FaJs }, { name: "React", icon: FaReact }, { name: "Next.js", icon: SiNextdotjs }, { name: "Node.js", icon: FaNodeJs }, { name: "TypeScript", icon: SiTypescript }, { name: "MongoDB", icon: SiMongodb }, { name: "Wordpress", icon: SiWordpress },
+];
 
 export default function Skills() {
-  return (
-    <section id="skills" className="py-16 sm:py-24 bg-tertiary">
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12 sm:mb-20">
-            <h2 className="text-responsive font-bold text-primary mb-6">
-              Competenze Tecniche
-            </h2>
-            <p className="text-secondary text-base sm:text-lg leading-relaxed max-w-2xl mx-auto px-4">
-              Le tecnologie che utilizzo per creare esperienze digitali eccezionali
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-            {skills.map((skill, index) => (
-              <div 
-                key={skill.name} 
-                className="group text-center animate-fade-in-up"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="bg-white rounded-2xl p-4 sm:p-6 lg:p-8 shadow-sm hover:shadow-lg transition-all duration-300 group-hover:-translate-y-2">
-                  <skill.icon className="text-3xl sm:text-4xl lg:text-5xl text-primary mx-auto mb-2 sm:mb-4 group-hover:scale-110 transition-transform duration-300" />
-                  <span className="text-xs sm:text-sm font-medium text-secondary tracking-wide">
-                    {skill.name}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  )
+  return <section id="skills" className="bg-[#0b1117] px-4 py-20 sm:px-8 sm:py-28"><div className="mx-auto max-w-7xl"><div className="mb-12 flex flex-col gap-5 border-b border-white/10 pb-8 sm:mb-16 sm:flex-row sm:items-end sm:justify-between"><h2 className="text-responsive text-white">Competenze Tecniche</h2><p className="max-w-md text-base leading-relaxed text-white/55 sm:text-right sm:text-lg">Le tecnologie che utilizzo per creare esperienze digitali eccezionali</p></div><div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-9">{skills.map((skill) => <div key={skill.name} className="group rounded-2xl border border-white/10 bg-white/[0.04] p-4 transition duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/10 sm:p-5"><skill.icon className="mb-8 text-3xl text-[#bcd1d6] transition duration-300 group-hover:scale-110 group-hover:text-white sm:text-4xl" /><span className="text-xs font-medium text-white/65 sm:text-sm">{skill.name}</span></div>)}</div></div></section>;
 }

@@ -1,86 +1,38 @@
 "use client";
-import type React from "react";
+
 import Image from "next/image";
+import Link from "next/link";
 import Button from "./Button";
 import SocialLinks from "./SocialLinks";
-import Link from "next/link";
-// import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center pt-20 pb-12 px-4 sm:px-6">
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-24 items-center">
-          {/* Left Content */}
-          <div className="space-y-4 sm:space-y-6 lg:space-y-12 order-2 lg:order-1">
-            {/* Main Heading */}
-            <div className="space-y-4 sm:space-y-6">
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-primary leading-tight animate-fade-in-up">
-                Ciao
-              </h1>
-              <p className="text-lg sm:text-xl lg:text-2xl text-primary font-medium leading-relaxed animate-fade-in-up animation-delay-200 max-w-md">
-                Sono Giorgio, realizzo siti web e web app su misura
-              </p>
+    <section className="relative isolate mx-3 mt-3 min-h-[calc(100vh-1.5rem)] overflow-hidden rounded-[1.5rem] border border-white/10 bg-[#17252d] px-4 pb-12 pt-28 sm:mx-8 sm:mt-8 sm:min-h-[calc(100vh-2rem)] sm:rounded-[2rem] sm:px-8 sm:pt-32 lg:mx-16">
+      <Image src="/mygaia.png" alt="Giorgio" fill priority className="object-cover object-center opacity-50" />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(9,17,22,0.95)_0%,rgba(12,27,34,0.7)_48%,rgba(11,19,24,0.4)_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(7,13,17,0.95)_0%,transparent_55%,rgba(7,13,17,0.3)_100%)]" />
+      <div className="absolute left-1/2 top-1/2 hidden h-[32rem] w-[32rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#bcd1d6]/10 blur-3xl lg:block" />
+      <div className="relative mx-auto flex min-h-[calc(100vh-10rem)] max-w-7xl items-center">
+        <div className="grid w-full items-center gap-12 lg:grid-cols-[1fr_0.7fr] lg:gap-20">
+          <div className="max-w-2xl">
+            <h1 className="text-hero-responsive text-white animate-fade-in-up">Ciao</h1>
+            <p className="mt-5 max-w-xl text-2xl font-medium leading-tight text-white sm:text-3xl lg:text-4xl animate-fade-in-up animation-delay-200">Sono Giorgio, realizzo siti web e web app su misura</p>
+            <div className="mt-6 max-w-lg animate-fade-in-up animation-delay-400">
+              <h2 className="text-xl font-bold text-white sm:text-2xl">Sviluppatore Web Full Stack</h2>
+              <p className="mt-3 text-base leading-relaxed text-white/70 sm:text-lg">Costruisco siti web moderni, performanti e su misura.</p>
             </div>
-
-            {/* Description */}
-            <div className="space-y-6 animate-fade-in-up animation-delay-400">
-              <h2 className="text-xl sm:text-2xl font-bold text-primary">
-                Sviluppatore Web Full Stack
-              </h2>
-              <p className="text-sm sm:text-base text-secondary leading-relaxed max-w-lg">
-                Costruisco siti web moderni, performanti e su misura.
-              </p>
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row animate-fade-in-up animation-delay-600">
+              <Button href="#projects" className="w-full border border-white bg-white px-6 text-[#172127] shadow-none hover:bg-[#dbe8eb] hover:text-[#172127] sm:w-auto">Esplora i Progetti</Button>
+              <Button href="#contact" variant="outline" className="w-full border-white/40 bg-white/10 px-6 text-white hover:border-white hover:bg-white hover:text-[#172127] sm:w-auto">Contattami</Button>
+              <Button className="w-full border border-white/20 bg-white/10 px-6 text-white shadow-none hover:bg-white/20 sm:w-auto"><Link href="https://calendly.com/giorgio-g97/30min" target="_blank">Prenota una Call!</Link></Button>
             </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:flex-nowrap sm:gap-4 animate-fade-in-up animation-delay-600">
-              <Button
-                href="#projects"
-                className="bg-primary text-white hover:bg-primary/90 px-6 sm:px-8 py-3 rounded-full font-medium tracking-wide transition-all duration-300 text-center w-full sm:w-auto"
-              >
-                Esplora i Progetti
-              </Button>
-              <Button
-                href="#contact"
-                variant="outline"
-                className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 sm:px-8 py-3 rounded-full font-medium tracking-wide transition-all duration-300 text-center w-full sm:w-auto"
-              >
-                Contattami
-              </Button>
-              <Button
-                className="bg-[#2285ff] text-white hover:bg-[#2285ff]/90 px-6 sm:px-8 py-3 rounded-full font-medium tracking-wide transition-all duration-300 text-center w-full sm:w-auto"
-              >
-                <Link
-                  href="https://calendly.com/giorgio-g97/30min"
-                  target="_blank"
-                  className="w-full"
-                >
-                  Prenota una Call!
-                </Link>
-              </Button>
-            </div>
-
-            {/* Social Links */}
-            <div className="animate-fade-in-up animation-delay-800">
-              <SocialLinks />
-            </div>
+            <div className="mt-9 animate-fade-in-up animation-delay-800"><SocialLinks variant="dark" /></div>
           </div>
-
-          {/* Right Image */}
-          <div className="relative order-1 lg:order-2 animate-fade-in">
-            <div className="relative">
-              <div className="absolute inset-0 bg-tertiary rounded-2xl transform rotate-3 hidden sm:block"></div>
-              <div className="relative bg-white rounded-2xl overflow-hidden shadow-2xl max-w-sm sm:max-w-none mx-auto">
-                <Image
-                  src="/hero.jpg"
-                  alt="Giorgio"
-                  width={500}
-                  height={600}
-                  className="object-cover w-full h-[300px] sm:h-[500px] lg:h-[600px]"
-                  priority
-                />
-              </div>
+          <div className="hidden justify-end lg:flex">
+            <div className="glass-panel w-full max-w-sm rounded-[2rem] p-5 shadow-2xl shadow-black/30">
+              <div className="mb-12 flex items-center justify-between"><span className="h-2 w-2 rounded-full bg-[#c7d9df]" /><span className="h-9 w-9 rounded-full border border-white/20" /></div>
+              <div className="h-36 rounded-[1.5rem] border border-white/10 bg-black/10" />
+              <div className="mt-3 grid grid-cols-2 gap-3"><div className="h-20 rounded-2xl border border-white/10 bg-white/10" /><div className="h-20 rounded-2xl border border-white/10 bg-white/10" /></div>
             </div>
           </div>
         </div>

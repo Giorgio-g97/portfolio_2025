@@ -3,94 +3,28 @@
 @tailwind utilities;
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-  
-  body {
-    @apply bg-white text-primary font-normal;
-    font-family: var(--font-dm-sans), system-ui, sans-serif;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    @apply text-primary font-bold;
-  }
+  * { @apply border-white/10; }
+  html { background: #0b1117; }
+  body { @apply bg-[#0b1117] text-white; font-family: var(--font-dm-sans), system-ui, sans-serif; }
+  h1,h2,h3,h4,h5,h6 { @apply font-bold tracking-[-0.04em]; }
+  ::selection { background: #c7d9df; color: #0b1117; }
 }
 
 @layer utilities {
-  .text-responsive {
-    @apply text-4xl;
-  }
-  
-  @screen sm {
-    .text-responsive {
-      @apply text-5xl;
-    }
-  }
-  
-  @screen lg {
-    .text-responsive {
-      @apply text-6xl;
-    }
-  }
-  
-  .text-hero-responsive {
-    @apply text-5xl;
-  }
-  
-  @screen sm {
-    .text-hero-responsive {
-      @apply text-6xl;
-    }
-  }
-  
-  @screen lg {
-    .text-hero-responsive {
-      @apply text-7xl;
-    }
-  }
-
-  .animate-fade-in {
-    animation: fadeIn 0.8s ease-out;
-  }
-
-  .animate-fade-in-up {
-    animation: fadeInUp 0.8s ease-out;
-  }
-
-  .animation-delay-200 {
-    animation-delay: 200ms;
-  }
-
-  .animation-delay-400 {
-    animation-delay: 400ms;
-  }
-
-  .animation-delay-600 {
-    animation-delay: 600ms;
-  }
-
-  .animation-delay-800 {
-    animation-delay: 800ms;
-  }
+  .text-responsive { @apply text-4xl; }
+  @screen sm { .text-responsive { @apply text-5xl; } }
+  @screen lg { .text-responsive { @apply text-6xl; } }
+  .text-hero-responsive { @apply text-5xl; }
+  @screen sm { .text-hero-responsive { @apply text-7xl; } }
+  @screen lg { .text-hero-responsive { @apply text-8xl; } }
+  .glass-panel { @apply border border-white/20 bg-white/10 backdrop-blur-xl; }
+  .animate-fade-in { animation: fadeIn .8s ease-out both; }
+  .animate-fade-in-up { animation: fadeInUp .8s ease-out both; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-600 { animation-delay: 600ms; }
+  .animation-delay-800 { animation-delay: 800ms; }
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
